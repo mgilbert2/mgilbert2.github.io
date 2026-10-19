@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Makenzy Gilbert | Technical Game Design Portfolio</title>
+    <meta
+      name="description"
+      content="Technical game design portfolio for Makenzy Gilbert: Unity prototypes, interactive systems, simulation tools, mods, and research."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23111315'/%3E%3Cpath d='M13 43V18h8l10 15 10-15h8v25h-7V29L33 43h-4L20 29v14z' fill='%23c8ff53'/%3E%3Ccircle cx='49' cy='47' r='6' fill='%23ff6b4a'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to work</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <nav class="nav-shell">
+        <a class="brand-mark" href="#top" aria-label="Makenzy Gilbert home">MG</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-list">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#mods">Skyrim</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#contact">Resume &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/deformable-landscape-hero.png"
+          alt="Unity simulation showing a wireframe landscape, a red movement path, a state point, and a magnet"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Technical Game Design | Unity &amp; C# | Interactive Systems</p>
+          <h1 id="hero-title">Makenzy Gilbert</h1>
+          <p class="hero-copy">
+            I develop interactive simulations and configurable systems in Unity and C#.
+            My work combines computational modeling, experiment automation, and
+            Skyrim level design to explore how systems behave and how players navigate them.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio actions">
+            <a class="button primary" href="#work">Featured Work</a>
+            <a class="button secondary" href="#contact">Resume &amp; Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Portfolio focus areas">
+        <div>
+          <strong>Unity</strong>
+          <span>C# gameplay systems</span>
+        </div>
+        <div>
+          <strong>Simulation</strong>
+          <span>Learning and recall models</span>
+        </div>
+        <div>
+          <strong>Research</strong>
+          <span>Behavior, memory, interaction</span>
+        </div>
+        <div>
+          <strong>Mods</strong>
+          <span>Skyrim dungeon and quest design</span>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Game and simulation projects</p>
+          <h2 id="work-title">Systems that turn behavior into feedback</h2>
+          <p>
+            Unity simulations, configurable C# systems, Python models, and Skyrim
+            level design. Each project connects implementation with testing and analysis.
+          </p>
+        </div>
+
+        <div class="filter-tabs" role="tablist" aria-label="Project filters">
+          <button type="button" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="systems">Game Systems</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="research">Research Tools</button>
+          <button type="button" role="tab" aria-selected="false" data-filter="mods">Mods</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal" data-category="systems">
+            <figure>
+              <img
+                src="assets/cumulative-recall.png"
+                alt="Cumulative recall paths from the attractor learning prototype"
+              />
+            </figure>
+            <div class="project-body">
+              <p class="card-kicker">Unity prototype</p>
+              <h3>Attractor Learning Prototype</h3>
+              <p>
+                A Unity system where a moving state point learns waypoint patterns as
+                attractor wells, then attempts recall under noise, cue fade, and
+                interference.
+              </p>
+              <ul class="impact-list">
+                <li>Implemented C# learning, force-field, and recall components.</li>
+                <li>Logged intended vs actual paths for tuning and analysis.</li>
+                <li>Built designer-facing parameters for depth, width, noise, and cue timing.</li>
+              </ul>
+              <div class="tag-row" aria-label="Skills used">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Physics</span>
+                <span>System Design</span>
+              </div>
+              <a class="text-link" href="https://github.com/mgilbert2/OpenDynamicsUnity">
+                GitHub Code
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="systems">
+            <figure>
+              <img
+                src="assets/accuracy-trajectories.png"
+                alt="Stage-wise accuracy trajectories for recall experiments"
+              />
+            </figure>
+            <div class="project-body">
+              <p class="card-kicker">Experiment automation</p>
+              <h3>CSV Experiment Runner</h3>
+              <p>
+                A repeatable Unity experiment pipeline that loads waypoint sets,
+                controls training and recall phases, exports CSV logs, and compares
+                results across seeds and conditions.
+              </p>
+              <ul class="impact-list">
+                <li>Supported batch runs, randomized recall order, and deterministic seeds.</li>
+                <li>Exported recall history, potential surfaces, and well statistics.</li>
+                <li>Connected prototype behavior to charts and written analysis.</li>
+              </ul>
+              <div class="tag-row" aria-label="Skills used">
+                <span>Tools</span>
+                <span>Data Logging</span>
+                <span>Balancing</span>
+                <span>QA Thinking</span>
+              </div>
+              <a
+                class="text-link"
+                href="https://github.com/mgilbert2/OpenDynamicsUnity/blob/main/Assets/CSVExperimentRunner.cs"
+              >
+                Experiment Runner
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="research">
+            <figure>
+              <img
+                src="assets/rmse-comparison.png"
+                alt="RMSE comparison chart from attractor analysis"
+              />
+            </figure>
+            <div class="project-body">
+              <p class="card-kicker">Python and R analysis</p>
+              <h3>Sparse Interference Simulation</h3>
+              <p>
+                A compact attractor-memory simulation that tests cue dropout,
+                competitor intrusion, perturbation, and decay-plus-noise conditions.
+              </p>
+              <ul class="impact-list">
+                <li>Modeled sparse cue, target, and context fields.</li>
+                <li>Classified outcomes as correct, intrusion, blend, or failure.</li>
+                <li>Compared retrieval outcomes across configurable interference conditions.</li>
+              </ul>
+              <div class="tag-row" aria-label="Skills used">
+                <span>Python</span>
+                <span>NumPy</span>
+                <span>Testing</span>
+                <span>Visualization</span>
+              </div>
+              <a class="text-link" href="https://github.com/mgilbert2/Sparsity-Attractor-Network">
+                Simulation Code
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card mod-card reveal" data-category="mods">
+            <div class="mod-visual" aria-hidden="true">
+              <span>Skyrim Special Edition</span>
+              <b>The Signal Below</b>
+            </div>
+            <div class="project-body">
+              <p class="card-kicker">Level design prototype</p>
+              <h3>The Signal Below</h3>
+              <p>
+                A Skyrim dungeon concept exploring route readability, a three-signal
+                puzzle, and a bridge holdout finale.
+              </p>
+              <ul class="impact-list">
+                <li>Mapped high/low routes, a shortcut loop, and encounter beats.</li>
+                <li>Wrote Papyrus controller source for the puzzle and wave holdout.</li>
+                <li>Configured a plugin cell named <code>TSBSignalBelow01</code>.</li>
+              </ul>
+              <div class="tag-row" aria-label="Skills used">
+                <span>Level Design</span>
+                <span>Creation Kit</span>
+                <span>Papyrus</span>
+                <span>Encounter Flow</span>
+              </div>
+              <a class="text-link" href="#mods">
+                Project Details
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mod-section" id="mods" aria-labelledby="mods-title">
+        <div class="section-heading">
+          <p class="eyebrow">Skyrim level design prototype</p>
+          <h2 id="mods-title">The Signal Below</h2>
+          <p>
+            A Skyrim Special Edition project with a branching dungeon layout and
+            scripted interaction concepts. The project includes a level-flow design,
+            a plugin cell, and Papyrus controller source.
+          </p>
+        </div>
+
+        <div class="case-study-grid">
+          <article class="case-summary reveal">
+            <div class="status-line">
+              <span>In development</span>
+            </div>
+            <h3>Design Goals</h3>
+            <p>
+              Teach the player the dungeon's spatial language, give them a meaningful
+              route choice, then test that understanding under pressure. The story is
+              centered on a buried Dwemer relay waking beneath a ruined
+              watchpost, and the player restores three signal stones while hostile
+              scavengers close in.
+            </p>
+            <dl class="facts-list">
+              <div>
+                <dt>Role</dt>
+                <dd>Level Designer / Technical Designer</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Skyrim Creation Kit, Papyrus</dd>
+              </div>
+              <div>
+                <dt>Plugin</dt>
+                <dd>TSB_SignalBelow.esp</dd>
+              </div>
+              <div>
+                <dt>Cell</dt>
+                <dd>TSBSignalBelow01 - The Signal Below</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="flow-panel reveal" aria-labelledby="flow-title">
+            <h3 id="flow-title">Level Flow Concept</h3>
+            <div class="flow-map" aria-label="The Signal Below proposed beat map">
+              <span>A. Ruined Entry</span>
+              <span>B. First Contact Camp</span>
+              <span>C. Split Chamber</span>
+              <span>D1. Aqueduct Ledge</span>
+              <span>D2. Crypt Floor</span>
+              <span>E. Signal Puzzle</span>
+              <span>F. Shortcut Descent</span>
+              <span>G. Bridge Holdout</span>
+              <span>H. Exit Vista</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="design-grid">
+          <article class="design-card reveal">
+            <p class="card-kicker">Readability</p>
+            <h3>Landmarks Pull The Player Forward</h3>
+            <p>
+              Use warm light to mark forward progress, cool light for optional spaces,
+              and the relay silhouette as a landmark before the puzzle chamber.
+            </p>
+          </article>
+          <article class="design-card reveal">
+            <p class="card-kicker">Route Choice</p>
+            <h3>High Ledge Or Low Crypt</h3>
+            <p>
+              Offer sightlines and exposure on the high route, with cover and a tighter
+              approach on the low route. Reconnect both paths before the signal chamber.
+            </p>
+          </article>
+          <article class="design-card reveal">
+            <p class="card-kicker">Scripted Interaction</p>
+            <h3>Three Signals, One Gate</h3>
+            <p>
+              The puzzle controller source tracks unique activators, advances quest
+              stages, plays feedback, and opens a gate after three signals.
+            </p>
+          </article>
+          <article class="design-card reveal">
+            <p class="card-kicker">Combat Climax</p>
+            <h3>Bridge Holdout Finale</h3>
+            <p>
+              The holdout controller source manages enemy waves, checks for living
+              enemies, and unlocks an exit after the encounter.
+            </p>
+          </article>
+        </div>
+
+      </section>
+
+      <section class="section skills-section" aria-labelledby="skills-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Technical skills</p>
+          <h2 id="skills-title">Tools and Methods</h2>
+        </div>
+        <div class="skill-grid">
+          <article>
+            <h3>Gameplay and systems</h3>
+            <p>Unity, C#, Skyrim Creation Kit, Papyrus scripting, runtime diagnostics.</p>
+          </article>
+          <article>
+            <h3>Design analysis</h3>
+            <p>Encounter pacing, route readability, recall metrics, tuning guides.</p>
+          </article>
+          <article>
+            <h3>Research tooling</h3>
+            <p>Python simulations, R visualization, CSV pipelines, reproducible appendices.</p>
+          </article>
+          <article>
+            <h3>Communication</h3>
+            <p>Technical writing, research presentations, interdisciplinary collaboration.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section research-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <p class="eyebrow">Research and presentations</p>
+          <h2 id="research-title">Memory and Interactive Simulation</h2>
+          <p>
+            Computational models of learning and memory, explored through Unity
+            simulations, parameter testing, and visual analysis.
+          </p>
+        </div>
+
+        <div class="research-resource-grid">
+          <article class="research-resource-card reveal">
+            <figure>
+              <img
+                src="assets/research/deformable-landscape-thumb.png"
+                alt="First page of the revised deformable landscape model manuscript"
+              />
+            </figure>
+            <div>
+              <p class="card-kicker">Research manuscript</p>
+              <h3>From Static to Dynamic Memories</h3>
+              <p>
+                A 58-page paper presenting the deformable landscape model: memories
+                as learned trajectories carved into a continuous potential surface,
+                tested through Unity recall simulations.
+              </p>
+              <div class="tag-row" aria-label="Research topics">
+                <span>Attractor Models</span>
+                <span>Unity Simulation</span>
+                <span>Memory Dynamics</span>
+              </div>
+              <a class="text-link" href="assets/documents/deformable-landscape-model.pdf">
+                Open Manuscript PDF
+              </a>
+            </div>
+          </article>
+
+          <article class="research-resource-card reveal">
+            <figure>
+              <img
+                src="assets/research/brazil-poster-thumb.png"
+                alt="A0 poster preview for the deformable landscape model"
+              />
+            </figure>
+            <div>
+              <p class="card-kicker">A0 research poster</p>
+              <h3>Deformable Landscape Model Poster</h3>
+              <p>
+                A visual research summary of the same model, with motivation, recall
+                conditions, simulation framework, stimulus sets, results, and conclusions
+                arranged for presentation.
+              </p>
+              <div class="tag-row" aria-label="Poster topics">
+                <span>Poster Design</span>
+                <span>Recall Conditions</span>
+                <span>Results Summary</span>
+              </div>
+              <a class="text-link" href="assets/documents/gilbert-brazil-poster-a0.pdf">
+                Open Poster PDF
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Resume &amp; Contact</h2>
+          <p>
+            Technical game design, Unity development, and computational research.
+          </p>
+        </div>
+        <div class="contact-links" aria-label="Resume and profile links">
+          <a class="button primary" href="assets/documents/makenzy-gilbert-resume.pdf" target="_blank" rel="noopener">View Resume (PDF)</a>
+          <a class="button secondary" href="mailto:makenzy101@gmail.com">Email</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/makenzy-gilbert-492713201/">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/mgilbert2">GitHub</a>
+          <a class="button secondary" href="https://www.nexusmods.com/profile/makenzy101/mods">Nexus Mods</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Makenzy Gilbert | Technical Game Design</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
